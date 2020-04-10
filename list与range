@@ -1,1 +1,12 @@
 list是直接生成一个列表，而range只是规划了一个数字范围，不是列表
+
+
+In [19]: a
+Out[19]: [1, 2, 3, 2]
+In [20]: b=list(a) #list是创建一个新表
+In [21]: b
+Out[21]: [1, 2, 3, 2]
+In [22]: a is b #a和b是否为同一个对象
+Out[22]: False
+In [23]: a==b
+Out[23]: True
