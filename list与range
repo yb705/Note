@@ -10,3 +10,10 @@ In [22]: a is b #a和b是否为同一个对象
 Out[22]: False
 In [23]: a==b
 Out[23]: True
+In [24]: c=a[:]#列表切片
+In [25]: c
+Out[25]: [1, 2, 3, 2]
+In [26]: c is b
+Out[26]: False
+In [27]: c is a
+Out[27]: False
