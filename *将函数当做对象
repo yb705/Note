@@ -1,0 +1,16 @@
+In [57]: state=[' Alabama','Georgial!','Georgia','georgia','south  carelina##']
+    ...:
+In [58]: import re
+In [59]: def remove_punctuation(value):
+    ...:     return re.sub('[!#]','',value)
+    ...:
+In [60]: clean_ops=[str.strip,remove_punctuation,str.title]#将函数方法合成一个列表
+In [61]: def clean_strings(strings,ops):
+    ...:     result=[]
+    ...:     for value in strings:
+    ...:         for function in ops:#将含有函数方法的列表当成遍历对象
+    ...:             value=function(value)#将形参依次带入列表中的函数进行处理
+    ...:         result.append(value)
+    ...:     return result
+In [63]: clean_strings(state,clean_ops)
+Out[63]: ['Alabama', 'Georgial', 'Georgia', 'Georgia', 'South  Carelina']
